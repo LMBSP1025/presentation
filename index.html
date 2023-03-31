@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가장 인간적인 미래</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <div id="next" onclick="next()"></div>
+    <div class="box">
+        <div id="title">
+            <h1>가장 인간적인 미래</h1>
+            <span>공멸의 시대에서 공존의 시대로.</span>
+        </div>
+        <img id="star" src="img/Untitled-3.png" alt="" height="1000">
+    </div>
+    <div class="box" id="one">
+        <div id="wrote">
+            <h1>윤송이 저자 소개</h1>
+            <hr>
+            <div id="content">
+                <ul>
+                    <li>KAIST 전기공학과 졸업</li>
+                    <li>MIT 컴퓨터 신경과학 박사</li>
+                    <li>메사추세츠 공과대학 대학원 박사</li>
+                    <li>현 엔씨소프트 최고전략책임자</li>
+                </ul>
+                <div>
+                    <img src="img/다운로드.jpeg" alt="" width="400">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="box" id="two">
+        <div id="wrote">
+            <h1>책의 주제 및 저술 배경</h1>
+            <hr>
+            <div id="content">
+                <ul>
+                    <li>그림 AI. 표절인가, 예술인가?</li>
+                    <li>성 착취당하는 가상 인간?</li>
+                    <li>인공지능의 무단 데이터 수집</li>
+                    <li>편향된 정보 수집과 문해력</li>
+                </ul>
+                <div>
+                    <img src="img/SSI_20220904221731_O2.jpg" alt="" width="800">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box" id="one">
+        <div id="wrote">
+            <h1>책의 내용</h1>
+            <hr>
+            <div id="content">
+                <ul>
+                    <li>정보화 시대의 사회 문제</li>
+                    <li>우리가 새로이 지녀야 할 윤리와 태도</li>
+                </ul>
+                <div>
+                    <iframe width="700" height="560" src="https://www.youtube.com/embed/RsS_0P6eNX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var cnt = 0;
+
+        function next() {
+            cnt = cnt + 1;
+            scrollTo({
+                top: window.innerHeight * cnt,
+                behavior: "smooth"
+            })
+        }
+        ScrollReveal({
+            reset: true,
+            interval: 36,
+            duration: 800,
+            distance: '5%',
+            origin: 'bottom',
+        });
+        ScrollReveal().reveal('#wrote');
+        ScrollReveal().reveal('#title');
+    </script>
+</body>
+
+</html>
