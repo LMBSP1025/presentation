@@ -76,6 +76,9 @@
 
         function next() {
             cnt = cnt + 1;
+            if (cnt == 4) {
+                cnt = 0;
+            }
             scrollTo({
                 top: window.innerHeight * cnt,
                 behavior: "smooth"
